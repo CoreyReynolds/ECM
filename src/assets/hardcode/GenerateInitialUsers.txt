@@ -1,0 +1,4 @@
+INSERT INTO USERS( USERID, PASSWORD ) VALUES 
+("creynold", "pass"),
+("dblaz", "pass"),
+("jsmith", "pass");

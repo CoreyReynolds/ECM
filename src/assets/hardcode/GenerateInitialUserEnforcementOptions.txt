@@ -1,0 +1,4 @@
+INSERT INTO userenfoptions( USERID, TYPE) VALUES 
+("creynold", "WPA"),
+("creynold", "MBEA"),
+("dblaz", "WPA")

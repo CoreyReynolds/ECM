@@ -1,0 +1,134 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Expense</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h2>Add Data</h2>
+  <form (ngSubmit)="saveData()">
+    
+    
+    <ion-item>
+      <ion-label>Officer ID</ion-label>
+      <ion-input type="number" placeholder="Officer ID" [(ngModel)]="data.officerID" name="officerID" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Violation ID</ion-label>
+      <ion-input type="number" placeholder="Violation ID" [(ngModel)]="data.violatoinID" name="violationID" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Issue Date</ion-label>
+      <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="data.issueDate" name="issueDate" required=""></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Block Number</ion-label>
+      <ion-input type="number" placeholder="Block Number" [(ngModel)]="data.blockNum" name="blockNum" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Offense Street Number</ion-label>
+      <ion-input type="number" placeholder="Street Number" [(ngModel)]="data.issueStreetNum " name="issueStreetNum " required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Offense Street Name</ion-label>
+      <ion-input type="text" placeholder="Street Name" [(ngModel)]="data.issueStreetName" name="issueStreetName" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Offense Street Type</ion-label>
+      <ion-input type="text" placeholder="Street Type" [(ngModel)]="data.issueStreetType" name="issueStreetType" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Street Number</ion-label>
+      <ion-input type="text" placeholder="Street Number" [(ngModel)]="data.custStreetNum" name="custStreetNum" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Street Name</ion-label>
+      <ion-input type="text" placeholder="Street Name" [(ngModel)]="data.custStreetName" name="custStreetName" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Street Type</ion-label>
+      <ion-input type="text" placeholder="Street Type" [(ngModel)]="data.custStreetType" name="custStreetType" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer City</ion-label>
+      <ion-input type="text" placeholder="City" [(ngModel)]="data.custCity" name="custCity" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Province</ion-label>
+      <ion-input type="text" placeholder="Province" [(ngModel)]="data.custProvince" name="custProvince" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Postal Code</ion-label>
+      <ion-input type="text" placeholder="Postal Code" [(ngModel)]="data.custPostalCode" name="custPostalCode" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Public Comment</ion-label>
+      <ion-input type="text" placeholder="Public observable comment" [(ngModel)]="data.pubComment" name="pubComment" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Private Comment</ion-label>
+      <ion-input type="text" placeholder="Internally observable comment" [(ngModel)]="data.privateComment" name="privateComment" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Location Comment</ion-label>
+      <ion-input type="text" placeholder="Additional location information" [(ngModel)]="data.locationComment" name="locationComment" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Warning</ion-label>
+      <ion-select [(ngModel)]="data.warning" name="warning" required="">
+        <ion-option value=0>Warning</ion-option>
+        <ion-option value=1>Citation</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer First Name</ion-label>
+      <ion-input type="text" placeholder="First Name" [(ngModel)]="data.custFirstName" name="custFirstName" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Last Name</ion-label>
+      <ion-input type="text" placeholder="Last Name" [(ngModel)]="data.custLastName" name="custLastName" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Group name</ion-label>
+      <ion-input type="text" placeholder="Group Name" [(ngModel)]="data.groupName" name="groupName" required="" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Customer Type</ion-label>
+      <ion-input type="text" placeholder="Customer Type" [(ngModel)]="data.custType" name="custType" required="" ></ion-input>
+    </ion-item>
+
+<!--
+      <ion-label>Description</ion-label>
+      <ion-input type="text" placeholder="Description" [(ngModel)]="data.description" name="description" required="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-input type="number" placeholder="Amount" [(ngModel)]="data.amount" name="amount" required="" ></ion-input>
+    </ion-item>
+  -->
+  
+    <button ion-button type="submit" block>Save Data</button>
+  </form>
+</ion-content>

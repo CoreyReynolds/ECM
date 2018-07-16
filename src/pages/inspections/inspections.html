@@ -1,0 +1,62 @@
+
+ <ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+      <ion-title>
+        Inspections
+      </ion-title>
+      <cust-logout></cust-logout>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+<div>
+  <ion-row>
+    <button ion-button class="NewInspection-btn" block full (click)="addData()">New Inspection</button>
+  </ion-row>  
+</div>
+<!--
+<ion-card *ngFor="let item of items" >
+   <p>{{item.name}}</p>
+   <p>{{item.date}}</p>
+</ion-card>
+-->
+
+<div>
+  <h2>Inspections List</h2>
+  <ion-list>
+    <ion-item-sliding *ngFor="let inspection of inspections; let i=index">
+      <ion-item nopadding>
+        <p>
+          <span>{{inspection.issueDate}}</span>
+          <br>Comment: {{inspection.privateComment}}<br>
+          {{inspection.description}}
+        </p>
+        <h3 item-end>
+          <span>Address: {{inspection.issueStreetNum}} {{inspection.issueStreetName}} {{inspection.issueStreetType}}</span>
+          <br>ViolatoinID: {{inspection.violationID}}<br>
+        </h3>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="primary" (click)="editData(inspection.rowid)">
+          <ion-icon name="paper"> Edit</ion-icon>
+        </button>
+        <button ion-button color="danger" (click)="deleteData(inspection.rowid)">
+          <ion-icon name="trash"> Delete</ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</div>
+</ion-content>
+
+<!--
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Total Inspections: ${{inspectionCount}}</ion-title>
+  </ion-toolbar>
+</ion-footer>
+-->
